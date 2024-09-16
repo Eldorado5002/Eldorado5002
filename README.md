@@ -10,7 +10,7 @@ A Developer and Problem-Solver from India
 
 ## Connect with me:
 <p align="left">
-<a href="https://linkedin.com/in/your-profile" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="your-profile" height="30" width="40" /></a>
+<a href="[https://linkedin.com/in/your-profile](https://www.linkedin.com/in/k-nagashiva-shankar-8996892bb/)" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="your-profile" height="30" width="40" /></a>
 <a href="https://twitter.com/your-profile" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" alt="your-profile" height="30" width="40" /></a>
 </p>
 
