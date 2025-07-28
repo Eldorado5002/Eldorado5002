@@ -2,7 +2,7 @@
 
 A Developer and Problem-Solver from India
 
-- 🔭 I’m currently working on CCP (Collaborative Coding Platform)  
+- 🔭 I’m currently working on MERN websites  
 - 💬 Ask me about Web Development, Machine Learning and Ai  
 - 📫 How to reach me: Nagashivashankar0410@gmail.com  
 - 😄 Pronouns: He/Him  
