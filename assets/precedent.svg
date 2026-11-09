@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="256" viewBox="0 0 680 256" role="img" style="font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
+<title>Precedent: resolving an invoice exception</title>
+<desc>An invoice is matched against its purchase order and goods receipt, passes six hard controls, recalls three similar past cases from memory and is approved with 0.95 confidence. The decision then flows back into memory.</desc>
+<defs><pattern id="pd2" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#1E232A"/></pattern></defs>
+<style>
+.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.cap{font-size:11px;letter-spacing:2px;fill:#E9B949;font-weight:600}
+.lb{font-size:11px;letter-spacing:1.2px;fill:#6E7681}
+.tx{font-size:13px;fill:#E6EDF3;font-weight:600}
+.mu{font-size:11px;fill:#8B949E}
+.lt{fill:#C9D1D9}
+.ok{fill:#3FB950}
+.nd{fill:#161A20;stroke:#2A3038}
+.on{fill:none;stroke:#5B8DB8;stroke-width:1.2}
+.ln{stroke:#2A3038;stroke-width:1.5}
+.fl{stroke:#6E7681;stroke-width:1.5;stroke-dasharray:3 5;opacity:.5;animation:fl 1s linear infinite}
+.a{animation-duration:10s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;animation-fill-mode:both}
+.lin{animation-timing-function:linear}
+.sc{transform-box:fill-box;transform-origin:center}
+@keyframes fl{to{stroke-dashoffset:-16}}
+@keyframes k1{0%{opacity:.2}4%,90%{opacity:1}96%,100%{opacity:.2}}
+@keyframes k2{0%,14%{opacity:.2}17%,90%{opacity:1}96%,100%{opacity:.2}}
+@keyframes k3{0%,30%{opacity:.2}33%,90%{opacity:1}96%,100%{opacity:.2}}
+@keyframes k4{0%,44%{opacity:.2}47%,90%{opacity:1}96%,100%{opacity:.2}}
+@keyframes k5{0%,62%{opacity:.2}65%,90%{opacity:1}96%,100%{opacity:.2}}
+@keyframes t1{0%,17%{opacity:0}19%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes t2{0%,20%{opacity:0}22%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes t3{0%,23%{opacity:0}25%,90%{opacity:1}96%,100%{opacity:0}}
+@keyframes sh{0%,32%{transform:scale(1)}35%{transform:scale(1.15)}38%,100%{transform:scale(1)}}
+@keyframes r1{0%,46%{opacity:0;transform:translateY(4px)}48%,90%{opacity:1;transform:translateY(0)}96%,100%{opacity:0;transform:translateY(0)}}
+@keyframes r2{0%,49%{opacity:0;transform:translateY(4px)}51%,90%{opacity:1;transform:translateY(0)}96%,100%{opacity:0;transform:translateY(0)}}
+@keyframes r3{0%,52%{opacity:0;transform:translateY(4px)}54%,90%{opacity:1;transform:translateY(0)}96%,100%{opacity:0;transform:translateY(0)}}
+@keyframes st{0%,64%{opacity:0;transform:scale(1.5)}68%,90%{opacity:1;transform:scale(1)}96%,100%{opacity:0;transform:scale(1)}}
+@keyframes p1{0%,8%{opacity:0;transform:translateX(0)}9%,13%{opacity:1}14%,100%{opacity:0;transform:translateX(38px)}}
+@keyframes p2{0%,24%{opacity:0;transform:translateX(0)}25%,29%{opacity:1}30%,100%{opacity:0;transform:translateX(38px)}}
+@keyframes p3{0%,38%{opacity:0;transform:translateX(0)}39%,43%{opacity:1}44%,100%{opacity:0;transform:translateX(38px)}}
+@keyframes p4{0%,56%{opacity:0;transform:translateX(0)}57%,61%{opacity:1}62%,100%{opacity:0;transform:translateX(38px)}}
+@keyframes arc{0%,70%{stroke-dashoffset:100;opacity:1}82%,90%{stroke-dashoffset:0;opacity:1}96%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes lbk{0%,80%{opacity:0}84%,90%{opacity:1}96%,100%{opacity:0}}
+</style>
+<rect width="680" height="256" rx="14" fill="#111418"/>
+<rect width="680" height="256" rx="14" fill="url(#pd2)"/>
+<rect x=".5" y=".5" width="679" height="255" rx="14" fill="none" stroke="#262C34"/>
+<text x="24" y="34" class="m cap">PRECEDENT</text>
+<text x="112" y="34" class="mu">resolving an invoice exception</text>
+<g class="m lb" text-anchor="middle"><text x="72" y="60">INVOICE</text><text x="206" y="60">3-WAY MATCH</text><text x="340" y="60">CONTROLS</text><text x="474" y="60">MEMORY</text><text x="608" y="60">DECISION</text></g>
+<g class="ln"><line x1="120" y1="124" x2="158" y2="124"/><line x1="254" y1="124" x2="292" y2="124"/><line x1="388" y1="124" x2="426" y2="124"/><line x1="522" y1="124" x2="560" y2="124"/></g>
+<g class="fl"><line x1="120" y1="124" x2="158" y2="124"/><line x1="254" y1="124" x2="292" y2="124"/><line x1="388" y1="124" x2="426" y2="124"/><line x1="522" y1="124" x2="560" y2="124"/></g>
+<g class="nd"><rect x="24" y="70" width="96" height="108" rx="10"/><rect x="158" y="70" width="96" height="108" rx="10"/><rect x="292" y="70" width="96" height="108" rx="10"/><rect x="426" y="70" width="96" height="108" rx="10"/><rect x="560" y="70" width="96" height="108" rx="10"/></g>
+<g class="a" style="animation-name:k1">
+<rect class="on" x="24" y="70" width="96" height="108" rx="10"/>
+<rect x="58" y="84" width="28" height="34" rx="3" fill="none" stroke="#8B949E" stroke-width="1.2"/>
+<path d="M64 94H80M64 101H80M64 108H74" stroke="#8B949E" stroke-width="1.2"/>
+<text x="72" y="142" class="tx" text-anchor="middle">₹4,200</text>
+<text x="72" y="160" class="mu" text-anchor="middle">freight line</text>
+</g>
+<g class="a" style="animation-name:k2">
+<rect class="on" x="158" y="70" width="96" height="108" rx="10"/>
+<g fill="#1C2128" stroke="#2A3038"><rect x="168" y="88" width="76" height="18" rx="9"/><rect x="168" y="112" width="76" height="18" rx="9"/><rect x="168" y="136" width="76" height="18" rx="9"/></g>
+<g class="m mu lt"><text x="180" y="101">PO</text><text x="180" y="125">GRN</text><text x="180" y="149">INV</text></g>
+</g>
+<g fill="none" stroke="#3FB950" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<path class="a" style="animation-name:t1" d="M226 97l3 3l6-6"/>
+<path class="a" style="animation-name:t2" d="M226 121l3 3l6-6"/>
+<path class="a" style="animation-name:t3" d="M226 145l3 3l6-6"/>
+</g>
+<g class="a" style="animation-name:k3">
+<rect class="on" x="292" y="70" width="96" height="108" rx="10"/>
+<g class="a sc" style="animation-name:sh">
+<path d="M340 84L358 91V105C358 116 350 123 340 126C330 123 322 116 322 105V91Z" fill="#1C2128" stroke="#8B949E" stroke-width="1.2"/>
+<path d="M332 105l5 5l10-11" fill="none" stroke="#3FB950" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text x="340" y="148" class="tx" text-anchor="middle">6 checks</text>
+<text x="340" y="164" class="mu ok" text-anchor="middle">passed</text>
+</g>
+<g class="a" style="animation-name:k4">
+<rect class="on" x="426" y="70" width="96" height="108" rx="10"/>
+<text x="474" y="166" class="mu" text-anchor="middle">3 precedents</text>
+</g>
+<g class="a" style="animation-name:r1"><rect x="436" y="82" width="76" height="18" rx="4" fill="#1C2128"/><circle cx="447" cy="91" r="3" fill="#3FB950"/><text x="457" y="95" class="m mu lt">₹3,850</text></g>
+<g class="a" style="animation-name:r2"><rect x="436" y="106" width="76" height="18" rx="4" fill="#1C2128"/><circle cx="447" cy="115" r="3" fill="#3FB950"/><text x="457" y="119" class="m mu lt">₹4,100</text></g>
+<g class="a" style="animation-name:r3"><rect x="436" y="130" width="76" height="18" rx="4" fill="#1C2128"/><circle cx="447" cy="139" r="3" fill="#3FB950"/><text x="457" y="143" class="m mu lt">₹2,900</text></g>
+<g class="a" style="animation-name:k5">
+<rect class="on" x="560" y="70" width="96" height="108" rx="10"/>
+<text x="608" y="146" class="mu lt" text-anchor="middle">conf. 0.95</text>
+<text x="608" y="162" class="mu" text-anchor="middle">8 cases cited</text>
+</g>
+<g class="a sc" style="animation-name:st"><rect x="570" y="94" width="76" height="28" rx="5" fill="#12301F" stroke="#3FB950"/><text x="608" y="112.5" text-anchor="middle" fill="#3FB950" style="font-size:12px;font-weight:700;letter-spacing:1px">APPROVE</text></g>
+<g class="a lin" style="animation-name:p1"><circle cx="120" cy="124" r="8" fill="#5B8DB8" opacity=".22"/><circle cx="120" cy="124" r="4" fill="#A5C4E0"/></g>
+<g class="a lin" style="animation-name:p2"><circle cx="254" cy="124" r="8" fill="#5B8DB8" opacity=".22"/><circle cx="254" cy="124" r="4" fill="#A5C4E0"/></g>
+<g class="a lin" style="animation-name:p3"><circle cx="388" cy="124" r="8" fill="#5B8DB8" opacity=".22"/><circle cx="388" cy="124" r="4" fill="#A5C4E0"/></g>
+<g class="a lin" style="animation-name:p4"><circle cx="522" cy="124" r="8" fill="#5B8DB8" opacity=".22"/><circle cx="522" cy="124" r="4" fill="#A5C4E0"/></g>
+<path class="a" style="animation-name:arc;stroke-dasharray:100" d="M608 180C608 222 474 222 474 184" fill="none" stroke="#8B949E" stroke-width="1.5" pathLength="100"/>
+<g class="a" style="animation-name:lbk"><path d="M469 191L474 183L479 191" fill="none" stroke="#8B949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><text x="541" y="238" class="mu" text-anchor="middle">every decision becomes memory</text></g>
+<text x="24" y="238" class="mu">98% vs 50% match with / without memory</text>
+</svg>
