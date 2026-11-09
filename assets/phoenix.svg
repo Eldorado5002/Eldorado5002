@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="248" viewBox="0 0 680 248" role="img" style="font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
+<title>PHOENIX: verify, or abstain</title>
+<desc>Two runs. In the first, both figures are found in the filing with quoted sources, the arithmetic is recomputed and the system answers 12.6 percent. In the second, no source exists for the figure, so verification fails and the system abstains.</desc>
+<defs><pattern id="pp3" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#221C18"/></pattern></defs>
+<style>
+.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.cap{font-size:11px;letter-spacing:2px;fill:#E9B949;font-weight:600}
+.lb{font-size:11px;letter-spacing:1.2px;fill:#7A6E64}
+.tx{font-size:13px;fill:#F3ECE6;font-weight:600}
+.mu{font-size:11px;fill:#9C9088}
+.lt{fill:#E3D9D0}
+.er{fill:#FF6B5B}
+.nd{fill:#1B1613;stroke:#33291F}
+.on{fill:none;stroke:#E8743B;stroke-width:1.2}
+.ln{stroke:#33291F;stroke-width:1.5}
+.fl{stroke:#8A6A55;stroke-width:1.5;stroke-dasharray:3 5;opacity:.5;animation:fl 1s linear infinite}
+.a{animation-duration:12s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;animation-fill-mode:both}
+.lin{animation-timing-function:linear}
+.sc{transform-box:fill-box;transform-origin:center}
+@keyframes fl{to{stroke-dashoffset:-16}}
+@keyframes nq{0%{opacity:.2}3%,46%{opacity:1}50%{opacity:.2}53%,96%{opacity:1}100%{opacity:.2}}
+@keyframes ne{0%,10%{opacity:.2}13%,46%{opacity:1}50%,60%{opacity:.2}63%,96%{opacity:1}100%{opacity:.2}}
+@keyframes nv{0%,22%{opacity:.2}25%,46%{opacity:1}50%,70%{opacity:.2}73%,96%{opacity:1}100%{opacity:.2}}
+@keyframes no{0%,34%{opacity:.2}37%,46%{opacity:1}50%,78%{opacity:.2}81%,96%{opacity:1}100%{opacity:.2}}
+@keyframes qa{0%{opacity:0}3%,46%{opacity:1}50%,100%{opacity:0}}
+@keyframes qb{0%,50%{opacity:0}53%,96%{opacity:1}100%{opacity:0}}
+@keyframes h1{0%,12%{opacity:0}14%,46%{opacity:1}50%,100%{opacity:0}}
+@keyframes h2{0%,15%{opacity:0}17%,46%{opacity:1}50%,100%{opacity:0}}
+@keyframes rb{0%,62%{opacity:0}64%,96%{opacity:1}100%{opacity:0}}
+@keyframes g1{0%,25%{opacity:0}27%,46%{opacity:1}50%,100%{opacity:0}}
+@keyframes g2{0%,28%{opacity:0}30%,46%{opacity:1}50%,100%{opacity:0}}
+@keyframes x1{0%,73%{opacity:0}75%,96%{opacity:1}100%{opacity:0}}
+@keyframes oa{0%,35%{opacity:0;transform:scale(1.3)}38%,46%{opacity:1;transform:scale(1)}50%,100%{opacity:0;transform:scale(1)}}
+@keyframes ob{0%,79%{opacity:0;transform:scale(1.3)}82%,96%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+@keyframes p1{0%,6%{opacity:0;transform:translateX(0)}7%,9%{opacity:1}10%{opacity:0;transform:translateX(26px)}11%,56%{opacity:0;transform:translateX(0)}57%,59%{opacity:1}60%{opacity:0;transform:translateX(26px)}61%,100%{opacity:0;transform:translateX(0)}}
+@keyframes p2{0%,18%{opacity:0;transform:translateX(0)}19%,21%{opacity:1}22%{opacity:0;transform:translateX(26px)}23%,66%{opacity:0;transform:translateX(0)}67%,69%{opacity:1}70%{opacity:0;transform:translateX(26px)}71%,100%{opacity:0;transform:translateX(0)}}
+@keyframes p3a{0%,30%{opacity:0;transform:translateX(0)}31%,33%{opacity:1}34%,100%{opacity:0;transform:translateX(26px)}}
+@keyframes p3b{0%,74%{opacity:0;transform:translateX(0)}75%,77%{opacity:1}78%,100%{opacity:0;transform:translateX(26px)}}
+</style>
+<rect width="680" height="248" rx="14" fill="#14110F"/>
+<rect width="680" height="248" rx="14" fill="url(#pp3)"/>
+<rect x=".5" y=".5" width="679" height="247" rx="14" fill="none" stroke="#2E2620"/>
+<text x="24" y="34" class="m cap">PHOENIX</text>
+<text x="100" y="34" class="mu">verify, or abstain</text>
+<text x="656" y="34" class="mu" text-anchor="end">IEEE TDSC · under review</text>
+<g class="m lb" text-anchor="middle"><text x="94" y="60">QUESTION</text><text x="275" y="60">EVIDENCE</text><text x="451" y="60">VERIFY</text><text x="599" y="60">OUTPUT</text></g>
+<g class="ln"><line x1="164" y1="130" x2="190" y2="130"/><line x1="360" y1="130" x2="386" y2="130"/><line x1="516" y1="130" x2="542" y2="130"/></g>
+<g class="fl"><line x1="164" y1="130" x2="190" y2="130"/><line x1="360" y1="130" x2="386" y2="130"/><line x1="516" y1="130" x2="542" y2="130"/></g>
+<g class="nd"><rect x="24" y="70" width="140" height="120" rx="10"/><rect x="190" y="70" width="170" height="120" rx="10"/><rect x="386" y="70" width="130" height="120" rx="10"/><rect x="542" y="70" width="114" height="120" rx="10"/></g>
+<rect class="on a" style="animation-name:nq" x="24" y="70" width="140" height="120" rx="10"/>
+<rect class="on a" style="animation-name:ne" x="190" y="70" width="170" height="120" rx="10"/>
+<rect class="on a" style="animation-name:nv" x="386" y="70" width="130" height="120" rx="10"/>
+<rect class="on a" style="animation-name:no" x="542" y="70" width="114" height="120" rx="10"/>
+<g class="a" style="animation-name:qa"><text x="94" y="124" class="tx" text-anchor="middle">FY24 operating</text><text x="94" y="143" class="tx" text-anchor="middle">margin?</text></g>
+<g class="a" style="animation-name:qb"><text x="94" y="124" class="tx" text-anchor="middle">FY24 net</text><text x="94" y="143" class="tx" text-anchor="middle">debt?</text></g>
+<g fill="#2A221D"><rect x="204" y="84" width="128" height="6" rx="3"/><rect x="204" y="96" width="96" height="6" rx="3"/><rect x="204" y="166" width="116" height="6" rx="3"/><rect x="204" y="178" width="70" height="6" rx="3"/></g>
+<g class="a" style="animation-name:h1"><rect x="200" y="112" width="150" height="20" rx="4" fill="#F2C14E" fill-opacity=".1"/><rect x="200" y="112" width="3" height="20" fill="#F2C14E"/><text x="210" y="126" class="m mu lt">Op. income 1,240</text></g>
+<g class="a" style="animation-name:h2"><rect x="200" y="138" width="150" height="20" rx="4" fill="#F2C14E" fill-opacity=".1"/><rect x="200" y="138" width="3" height="20" fill="#F2C14E"/><text x="210" y="152" class="m mu lt">Revenue 9,860</text></g>
+<g class="a" style="animation-name:rb"><rect x="200" y="110" width="150" height="48" rx="4" fill="#FF6B5B" fill-opacity=".06" stroke="#FF6B5B" stroke-dasharray="4 3"/><text x="275" y="130" class="mu er" text-anchor="middle">no quote found</text><text x="275" y="147" class="m mu lt" text-anchor="middle">"net debt"</text></g>
+<g fill="none" stroke="#3A2F27" stroke-width="1.5"><circle cx="402" cy="112" r="7"/><circle cx="402" cy="140" r="7"/></g>
+<text x="416" y="116" class="mu lt">figure ↔ quote</text>
+<text x="416" y="144" class="mu lt">math recomputed</text>
+<g fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<path class="a" style="animation-name:g1" d="M398.5 112l2.5 2.5l4.5-5" stroke="#34C38F"/>
+<path class="a" style="animation-name:g2" d="M398.5 140l2.5 2.5l4.5-5" stroke="#34C38F"/>
+<path class="a" style="animation-name:x1" d="M399 109l6 6M405 109l-6 6" stroke="#FF6B5B"/>
+</g>
+<text class="a m mu" style="animation-name:g2;fill:#E3D9D0" x="451" y="174" text-anchor="middle">1240/9860 = 12.6%</text>
+<g class="a sc" style="animation-name:oa"><text x="599" y="128" text-anchor="middle" style="font-size:22px;font-weight:700;fill:#34C38F">12.6%</text><text x="599" y="150" class="mu" text-anchor="middle">answer, cited</text></g>
+<g class="a sc" style="animation-name:ob"><rect x="556" y="108" width="86" height="26" rx="13" fill="#2A2110" stroke="#E9B949"/><text x="599" y="125.5" text-anchor="middle" style="font-size:12px;font-weight:700;letter-spacing:1px;fill:#E9B949">ABSTAIN</text><text x="599" y="156" class="mu" text-anchor="middle">no silent guess</text></g>
+<g class="a lin" style="animation-name:p1"><circle cx="164" cy="130" r="8" fill="#E8743B" opacity=".25"/><circle cx="164" cy="130" r="4" fill="#FFB27A"/></g>
+<g class="a lin" style="animation-name:p2"><circle cx="360" cy="130" r="8" fill="#E8743B" opacity=".25"/><circle cx="360" cy="130" r="4" fill="#FFB27A"/></g>
+<g class="a lin" style="animation-name:p3a"><circle cx="516" cy="130" r="8" fill="#E8743B" opacity=".25"/><circle cx="516" cy="130" r="4" fill="#FFB27A"/></g>
+<g class="a lin" style="animation-name:p3b"><circle cx="516" cy="130" r="8" fill="#E9B949" opacity=".25"/><circle cx="516" cy="130" r="4" fill="#F5D27A"/></g>
+<text x="24" y="226" class="mu">silent wrong answers 16.8% → 5.0% on DocFinQA</text>
+<text x="656" y="226" class="mu" text-anchor="end">359 of 360 unsupported figures caught</text>
+</svg>
