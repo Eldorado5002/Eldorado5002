@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=2E75B6&center=true&vCenter=true&width=650&lines=Building+AI+that+knows+when+not+to+answer;Lead+developer+of+PHOENIX+%C2%B7+IEEE+TDSC+(under+review);AI+agents+%C2%B7+Retrieval+%C2%B7+Backend+systems;Open+to+2027+internships" alt="Typing animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=1000&color=2E75B6&center=true&vCenter=true&width=650&lines=Building+AI+that+knows+when+not+to+answer;Lead+developer+of+PHOENIX+%C2%B7+IEEE+TDSC+(under+review);AI+agents+%C2%B7+Retrieval+%C2%B7+Backend+systems" alt="Typing animation" />
 </p>
 
 ## About me
@@ -80,12 +80,10 @@ Language models answering questions on financial filings often return confident 
 
 <p align="center"><sub><b>AI &amp; retrieval:</b> RAG · hybrid search · cross-encoder reranking · LangGraph · Qdrant · BGE-M3 · Gemini · Vertex AI</sub></p>
 
+<br>
+
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Eldorado5002/Eldorado5002/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Eldorado5002/Eldorado5002/output/github-snake.svg" />
-    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/Eldorado5002/Eldorado5002/output/github-snake.svg" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/Eldorado5002/Eldorado5002/output/snake.svg" width="100%" alt="Contribution snake" />
 </p>
 
 <p align="center">
