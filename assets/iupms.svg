@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="264" viewBox="0 0 680 264" role="img" style="font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif">
+<title>IUPMS: smart parking, end to end</title>
+<desc>Top-down parking lot. A red car and then a white car drive up to the entry gate; each is detected, its number plate is read, the ESP32 opens the gate and the car parks in a free slot. With the lot full, a yellow car backs out and leaves through the exit. The loop then repeats.</desc>
+<defs>
+<pattern id="gr" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r="1.2" fill="#517E33"/><circle cx="10" cy="11" r="1" fill="#517E33"/></pattern>
+<clipPath id="cs"><rect x="0" y="44" width="680" height="186"/></clipPath>
+<clipPath id="cp"><rect width="680" height="264" rx="14"/></clipPath>
+<g id="car">
+<rect x="-22" y="-11" width="44" height="22" rx="6" fill="currentColor"/>
+<rect x="-22" y="-11" width="44" height="22" rx="6" fill="none" stroke="#000" stroke-opacity=".25"/>
+<rect x="-10" y="-9" width="17" height="18" rx="4" fill="#000" fill-opacity=".12"/>
+<rect x="7" y="-9" width="7" height="18" rx="2" fill="#1E252D"/>
+<rect x="-17" y="-8" width="5" height="16" rx="2" fill="#1E252D"/>
+<rect x="19.5" y="-9" width="2.5" height="4" rx="1" fill="#FFF4C2"/><rect x="19.5" y="5" width="2.5" height="4" rx="1" fill="#FFF4C2"/>
+<rect x="-22" y="-9" width="2" height="4" fill="#E0322F"/><rect x="-22" y="5" width="2" height="4" fill="#E0322F"/>
+<rect x="5" y="-13" width="3" height="2.5" rx="1" fill="currentColor"/><rect x="5" y="10.5" width="3" height="2.5" rx="1" fill="currentColor"/>
+</g>
+</defs>
+<style>
+.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.cap{font-size:11px;letter-spacing:2px;fill:#E9B949;font-weight:600}
+.mu{font-size:11px;fill:#9AA4AE}
+.a{animation-duration:16s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;animation-fill-mode:both}
+.vb{transform-box:view-box;transform-origin:0 0}
+.gt{transform-box:view-box;transform-origin:300px 211px}
+@keyframes dip{0%{opacity:0}2%,97%{opacity:1}100%{opacity:0}}
+@keyframes cone{0%,100%{opacity:.07}50%{opacity:.18}}
+@keyframes fl{to{stroke-dashoffset:-46}}
+@keyframes ca{0%,2%{transform:translate(-40px,192px) rotate(0deg)}14%,31%{transform:translate(262px,192px) rotate(0deg)}39%{transform:translate(516px,192px) rotate(0deg)}44%,100%{transform:translate(516px,104px) rotate(-90deg)}}
+@keyframes cb{0%,38%{transform:translate(-40px,192px) rotate(0deg)}50%,67%{transform:translate(262px,192px) rotate(0deg)}75%{transform:translate(596px,192px) rotate(0deg)}80%,100%{transform:translate(596px,104px) rotate(-90deg)}}
+@keyframes cx{0%,83%{transform:translate(636px,104px) rotate(-90deg)}88%{transform:translate(636px,164px) rotate(0deg)}95%,100%{transform:translate(730px,164px) rotate(0deg)}}
+@keyframes gate{0%,28%{transform:rotate(0deg)}31%,35%{transform:rotate(90deg)}38%,64%{transform:rotate(0deg)}67%,71%{transform:rotate(90deg)}74%,100%{transform:rotate(0deg)}}
+@keyframes bb{0%,14%{opacity:0}16%,30%{opacity:1}32%,50%{opacity:0}52%,66%{opacity:1}68%,100%{opacity:0}}
+@keyframes ta{0%,15%{opacity:0}17%,30%{opacity:1}32%,100%{opacity:0}}
+@keyframes tb{0%,51%{opacity:0}53%,66%{opacity:1}68%,100%{opacity:0}}
+@keyframes hd{0%,16%{opacity:0}18%,40%{opacity:1}42%,52%{opacity:0}54%,76%{opacity:1}78%,100%{opacity:0}}
+@keyframes pa{0%,18%{opacity:0}20%,40%{opacity:1}42%,100%{opacity:0}}
+@keyframes pb{0%,54%{opacity:0}56%,76%{opacity:1}78%,100%{opacity:0}}
+@keyframes mq{0%,21%{opacity:0}22%,25%{opacity:1}26%,57%{opacity:0}58%,61%{opacity:1}62%,100%{opacity:0}}
+@keyframes es{0%,23%{opacity:0}24%,27%{opacity:1}28%,59%{opacity:0}60%,63%{opacity:1}64%,100%{opacity:0}}
+@keyframes wg{0%,25%{opacity:0}26%,29%{opacity:1}30%,61%{opacity:0}62%,65%{opacity:1}66%,100%{opacity:0}}
+@keyframes l3{0%,44%{opacity:0}46%,100%{opacity:1}}
+@keyframes l5{0%,80%{opacity:0}82%,100%{opacity:1}}
+@keyframes l6{0%,86%{opacity:0}88%,100%{opacity:1}}
+@keyframes s1{0%,43%{opacity:1}45%,97%{opacity:0}99%,100%{opacity:1}}
+@keyframes s2{0%,43%{opacity:0}45%,79%{opacity:1}81%,100%{opacity:0}}
+@keyframes s3{0%,79%{opacity:0}81%,87%{opacity:1}89%,100%{opacity:0}}
+@keyframes s4{0%,87%{opacity:0}89%,97%{opacity:1}99%,100%{opacity:0}}
+</style>
+<g clip-path="url(#cp)">
+<rect width="680" height="264" fill="#12161B"/>
+<text x="24" y="28" class="m cap">IUPMS</text>
+<text x="80" y="28" class="mu">smart parking, end to end</text>
+<g class="m" text-anchor="end" style="font-size:11px">
+<text class="a" x="656" y="28" style="animation-name:s1;fill:#56D364">2 of 6 slots free</text>
+<text class="a" x="656" y="28" style="animation-name:s2;fill:#56D364">1 of 6 slots free</text>
+<text class="a" x="656" y="28" style="animation-name:s3;fill:#FF6B6B;font-weight:700;letter-spacing:1.5px">LOT FULL</text>
+<text class="a" x="656" y="28" style="animation-name:s4;fill:#56D364">1 of 6 slots free</text>
+</g>
+<g class="a" style="animation-name:dip" clip-path="url(#cs)">
+<rect x="0" y="44" width="680" height="186" fill="#5C8A3C"/>
+<rect x="0" y="44" width="680" height="186" fill="url(#gr)"/>
+<rect x="404" y="52" width="276" height="100" fill="#4F5359"/>
+<rect x="0" y="150" width="680" height="56" fill="#464A50"/>
+<rect x="0" y="206" width="680" height="10" fill="#B9BDC1"/>
+<path d="M0 206H680" stroke="#8E9399"/>
+<path d="M0 153H404M0 203H680" stroke="#ECEFF1" stroke-width="1.5" opacity=".8"/>
+<path d="M0 178H680" stroke="#E9B949" stroke-width="2" stroke-dasharray="14 10"/>
+<path d="M416 66H656M416 66V146M456 66V146M496 66V146M536 66V146M576 66V146M616 66V146M656 66V146" fill="none" stroke="#ECEFF1" stroke-width="1.5" opacity=".85"/>
+<g fill="#3F6B2A"><circle cx="30" cy="223" r="5"/><circle cx="74" cy="223" r="5"/><circle cx="118" cy="223" r="5"/><circle cx="162" cy="223" r="5"/><circle cx="206" cy="223" r="5"/><circle cx="250" cy="223" r="5"/><circle cx="350" cy="223" r="5"/><circle cx="394" cy="223" r="5"/><circle cx="438" cy="223" r="5"/><circle cx="482" cy="223" r="5"/><circle cx="526" cy="223" r="5"/><circle cx="570" cy="223" r="5"/><circle cx="614" cy="223" r="5"/><circle cx="658" cy="223" r="5"/></g>
+<text x="150" y="196" class="m" style="font-size:11px;letter-spacing:3px;fill:#ECEFF1;opacity:.6">ENTRY</text>
+<text x="590" y="168" class="m" style="font-size:11px;letter-spacing:3px;fill:#ECEFF1;opacity:.6">EXIT →</text>
+<circle cx="436" cy="59" r="3.5" fill="#F85149"/><circle cx="476" cy="59" r="3.5" fill="#F85149"/><circle cx="516" cy="59" r="3.5" fill="#3FB950"/><circle cx="556" cy="59" r="3.5" fill="#F85149"/><circle cx="596" cy="59" r="3.5" fill="#3FB950"/><circle cx="636" cy="59" r="3.5" fill="#F85149"/>
+<circle class="a" style="animation-name:l3" cx="516" cy="59" r="3.5" fill="#F85149"/>
+<circle class="a" style="animation-name:l5" cx="596" cy="59" r="3.5" fill="#F85149"/>
+<circle class="a" style="animation-name:l6" cx="636" cy="59" r="3.5" fill="#3FB950"/>
+<use href="#car" transform="translate(436 104) rotate(-90)" style="color:#26282C"/>
+<use href="#car" transform="translate(476 104) rotate(-90)" style="color:#2F5D9E"/>
+<use href="#car" transform="translate(556 104) rotate(-90)" style="color:#2E7D4F"/>
+<line x1="270" y1="94" x2="270" y2="149" stroke="#7A7F86" stroke-width="2.5"/>
+<polygon points="266,94 232,204 296,204" fill="#FFFFFF" style="animation:cone 1.8s ease-in-out infinite"/>
+<rect x="256" y="80" width="28" height="14" rx="3" fill="#2B2F35" stroke="#15181C"/>
+<circle cx="278" cy="87" r="3" fill="#0E1116" stroke="#9AA4AE"/>
+<rect x="20" y="58" width="172" height="46" rx="6" fill="#0E1116" fill-opacity=".88"/>
+<text x="32" y="76" class="m mu">YOLOv8</text>
+<text x="32" y="94" class="m mu">OCR</text>
+<text x="92" y="76" class="m a" style="animation-name:hd;font-size:11px;fill:#3FE07A">car detected</text>
+<text x="92" y="94" class="m a" style="animation-name:pa;font-size:11px;fill:#E6EDF3">TS09 EA 4412</text>
+<text x="92" y="94" class="m a" style="animation-name:pb;font-size:11px;fill:#E6EDF3">TS07 GH 2087</text>
+<path d="M286 87H330" stroke="#ECEFF1" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="3 4"/>
+<path d="M286 87H330" stroke="#FFC94D" stroke-width="2.5" stroke-linecap="round" style="stroke-dasharray:6 40;animation:mq 16s ease-in-out infinite both,fl .6s linear infinite"/>
+<rect x="332" y="74" width="48" height="26" rx="3" fill="#1B1F24" stroke="#0B0D10"/>
+<path d="M338 70V74M345 70V74M352 70V74M359 70V74M366 70V74M373 70V74M338 100V104M345 100V104M352 100V104M359 100V104M366 100V104M373 100V104" stroke="#C0C6CC" stroke-width="1.2"/>
+<text x="356" y="91" class="m" text-anchor="middle" style="font-size:11px;fill:#E6EDF3">ESP32</text>
+<rect class="a" style="animation-name:es" x="332" y="74" width="48" height="26" rx="3" fill="none" stroke="#FFC94D" stroke-width="2"/>
+<path d="M356 104V128H300V146" fill="none" stroke="#ECEFF1" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="3 4"/>
+<path d="M356 104V128H300V146" fill="none" stroke="#FFC94D" stroke-width="2.5" stroke-linecap="round" style="stroke-dasharray:6 40;animation:wg 16s ease-in-out infinite both,fl .6s linear infinite"/>
+<g class="a vb" style="animation-name:cx"><use href="#car" style="color:#F2B705"/></g>
+<g class="a vb" style="animation-name:ca"><use href="#car" style="color:#D7263D"/></g>
+<g class="a vb" style="animation-name:cb"><use href="#car" style="color:#F4F5F6"/></g>
+<path class="a" style="animation-name:bb" d="M234 183V175H242M282 175H290V183M290 201V209H282M242 209H234V201" fill="none" stroke="#3FE07A" stroke-width="2"/>
+<g class="a" style="animation-name:ta"><rect x="234" y="161" width="62" height="14" rx="2" fill="#3FE07A"/><text x="238" y="172" class="m" style="font-size:11px;fill:#0E1116">car 0.94</text></g>
+<g class="a" style="animation-name:tb"><rect x="234" y="161" width="62" height="14" rx="2" fill="#3FE07A"/><text x="238" y="172" class="m" style="font-size:11px;fill:#0E1116">car 0.91</text></g>
+<g class="a gt" style="animation-name:gate"><line x1="300" y1="211" x2="300" y2="152" stroke="#D32F2F" stroke-width="4.5" stroke-linecap="round"/><line x1="300" y1="205" x2="300" y2="156" stroke="#FFFFFF" stroke-width="4.5" stroke-dasharray="6 7"/></g>
+<rect x="294" y="205" width="12" height="12" rx="2" fill="#5B6068"/>
+</g>
+<text x="24" y="252" class="mu">30 FPS detection · under 500 ms gate response</text>
+</g>
+<rect x=".5" y=".5" width="679" height="263" rx="14" fill="none" stroke="#232A33"/>
+</svg>
