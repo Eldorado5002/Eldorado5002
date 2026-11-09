@@ -17,7 +17,7 @@
 - Build AI that checks its own work, and says *"I don't know"* when it can't
 - Lead developer and corresponding author of **PHOENIX**, a verify-or-abstain system for financial QA *(under review, IEEE TDSC)*
 - Built **Precedent**, an accounts-payable agent that learns from every invoice it resolves
-- Lead Organizer, **GDG on Campus KMIT**
+- Lead Organizer, **Google Developers Groups on Campus - Keshav Memorial Institute of Technology (KMIT)**
 
 ## Projects
 
