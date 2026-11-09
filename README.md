@@ -83,7 +83,11 @@ Language models answering questions on financial filings often return confident 
 <br>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Eldorado5002/Eldorado5002/output/snake.svg" width="100%" alt="Contribution snake" />
+  <img src="https://raw.githubusercontent.com/Eldorado5002/Eldorado5002/output/activity.svg" width="100%" alt="Contribution activity" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Eldorado5002/Eldorado5002/output/streak.svg" width="100%" alt="Contribution streak" />
 </p>
 
 <p align="center">
