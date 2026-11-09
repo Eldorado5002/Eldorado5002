@@ -54,6 +54,8 @@ def panel(h):
             f'<rect x=".5" y=".5" width="679" height="{h - 1}" rx="14" fill="none" stroke="#262C34"/>')
 
 
+# ---------- Data ----------
+
 # Last 12 months, the same window as your profile calendar
 me = gql(Q_YEAR, {"login": USER})
 cal = me["contributionsCollection"]["contributionCalendar"]
@@ -112,8 +114,9 @@ year_active = sum(1 for c in cells if c[2] > 0)
 busy = max(cells, key=lambda c: c[2])
 range_label = f"{cells[0][3]:%b %Y} – {cells[-1][3]:%b %Y}"
 
-# 3D activity calendar
-S, C, OX, OY = 8, 0.866, 150, 100
+# ---------- Activity card: 3D calendar that grows in once ----------
+
+S, C, OX, OY = 8, 0.866, 160, 96
 TOPS = ["#1E242C", "#5A4419", "#8A6820", "#C0912A", "#E9B949"]
 LEFTS = ["#181D24", "#46350F", "#6C5118", "#977121", "#B88F35"]
 RIGHTS = ["#14181E", "#3A2C0C", "#5A4314", "#7E5E1B", "#9A772B"]
@@ -135,64 +138,99 @@ for w, d, n, _ in sorted(cells, key=lambda c: (c[0] + c[1], c[0])):
     top = [(x, y - h), (x + S * C, y + S * .5 - h), (x, y + S - h), (x - S * C, y + S * .5 - h)]
     left = [(x - S * C, y + S * .5 - h), (x, y + S - h), (x, y + S), (x - S * C, y + S * .5)]
     right = [(x, y + S - h), (x + S * C, y + S * .5 - h), (x + S * C, y + S * .5), (x, y + S)]
-    bars.append(f'<g class="b" style="animation-delay:{w * 0.025:.3f}s">'
+    bars.append(f'<g class="b" style="animation-delay:{w * 0.05:.2f}s">'
                 f'<polygon points="{pts(left)}" fill="{LEFTS[lv]}"/>'
                 f'<polygon points="{pts(right)}" fill="{RIGHTS[lv]}"/>'
                 f'<polygon points="{pts(top)}" fill="{TOPS[lv]}"/></g>')
 
 max_sum = max(c[0] + c[1] for c in cells)
-H = max(372, round(OY + max_sum * S * 0.5 + S + 40))
+H = max(372, round(OY + max_sum * S * 0.5 + S + 36))
 legend = "".join(f'<rect x="{54 + i * 14}" y="{H - 59}" width="10" height="10" rx="2" fill="{col}"/>'
                  for i, col in enumerate(TOPS))
+
+ACTIVITY_CSS = (
+    "<style>"
+    ".b{transform-box:fill-box;transform-origin:50% 100%;"
+    "animation:grow 1s cubic-bezier(.2,.7,.2,1) both}"
+    "@keyframes grow{from{transform:scaleY(.05);opacity:0}to{transform:scaleY(1);opacity:1}}"
+    ".f1{animation:up .8s ease-out .2s both}.f2{animation:up .8s ease-out .5s both}"
+    "@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}"
+    "</style>"
+)
 
 activity = "".join([
     f'<svg xmlns="http://www.w3.org/2000/svg" width="680" height="{H}" viewBox="0 0 680 {H}" '
     f'role="img" style="font-family:{SANS}">',
     "<title>Contribution activity</title>",
-    "<style>.b{animation:rise .6s ease-out both}"
-    "@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}</style>",
+    ACTIVITY_CSS,
     panel(H),
     text(24, 34, "ACTIVITY", fill="#E9B949", weight=600, mono=True, spacing=2),
     text(104, 34, "a year of commits, public + private"),
-    text(470, 88, f"{year_total:,}", size=28, fill="#E6EDF3", weight=700),
-    text(470, 108, "contributions in the last year"),
-    text(470, 124, range_label, fill="#6E7681"),
+    '<g class="f1">',
+    text(656, 86, f"{year_total:,}", size=28, fill="#E6EDF3", weight=700, anchor="end"),
+    text(656, 106, "contributions in the last year", anchor="end"),
+    text(656, 122, range_label, fill="#6E7681", anchor="end"),
+    "</g>",
     "".join(bars),
-    text(24, H - 110, f"{year_active}", size=20, fill="#E6EDF3", weight=700),
-    text(64, H - 110, f"active days of {year_days}"),
+    '<g class="f2">',
+    text(24, H - 112, f"{year_active}", size=20, fill="#E6EDF3", weight=700),
+    text(64, H - 112, f"active days of {year_days}"),
     text(24, H - 86, f"{busy[2]}", size=20, fill="#E6EDF3", weight=700),
     text(64, H - 86, f"busiest day · {md(busy[3])}"),
     text(24, H - 50, "less", fill="#6E7681"),
     legend,
     text(126, H - 50, "more", fill="#6E7681"),
-    text(24, H - 22, "updated daily from GitHub", fill="#6E7681"),
+    text(24, H - 24, "updated daily from GitHub", fill="#6E7681"),
+    "</g>",
     "</svg>",
 ])
 
-# Streak card: total, longest streak (ring), best month
+# ---------- Streak card: ring, glow and flame play once ----------
+
+STREAK_CSS = (
+    "<style>"
+    ".c1{animation:up .8s ease-out both}.c2{animation:up .8s ease-out .3s both}"
+    ".c3{animation:up .8s ease-out .6s both}"
+    "@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}"
+    "#rg{stroke-dasharray:214;animation:ring 1.6s ease-out .4s both}"
+    "@keyframes ring{from{stroke-dashoffset:214}to{stroke-dashoffset:0}}"
+    "#gl{animation:gl 1.2s ease-out 1.9s both}"
+    "@keyframes gl{0%{opacity:0}40%{opacity:.22}100%{opacity:0}}"
+    "#fm{transform-box:fill-box;transform-origin:50% 100%;animation:fm 1.2s ease-out 1.9s both}"
+    "@keyframes fm{0%{transform:scale(0);opacity:0}45%{transform:scale(1.25,1.35);opacity:1}"
+    "70%{transform:scale(.95);opacity:1}100%{transform:scale(1);opacity:1}}"
+    "</style>"
+)
+
 streak = "".join([
-    f'<svg xmlns="http://www.w3.org/2000/svg" width="680" height="160" viewBox="0 0 680 160" '
+    f'<svg xmlns="http://www.w3.org/2000/svg" width="680" height="180" viewBox="0 0 680 180" '
     f'role="img" style="font-family:{SANS}">',
     "<title>Contribution streak</title>",
-    "<style>#rg{stroke-dasharray:214;animation:ring 1.6s ease-out both}"
-    "@keyframes ring{from{stroke-dashoffset:214}to{stroke-dashoffset:0}}</style>",
-    panel(160),
+    STREAK_CSS,
+    panel(180),
     text(24, 30, "STREAK", fill="#E9B949", weight=600, mono=True, spacing=2),
-    '<path d="M230 52V140M450 52V140" stroke="#262C34"/>',
-    text(120, 92, f"{total:,}", size=24, fill="#E6EDF3", weight=700, anchor="middle"),
-    text(120, 114, "Total contributions", size=12, fill="#C9D1D9", anchor="middle"),
-    text(120, 132, f"{mdy(first)} – Present", fill="#6E7681", anchor="middle"),
-    '<circle cx="340" cy="86" r="34" fill="none" stroke="#2A3038" stroke-width="4"/>',
-    '<circle id="rg" cx="340" cy="86" r="34" fill="none" stroke="#E9B949" stroke-width="4" '
-    'stroke-linecap="round" transform="rotate(-90 340 86)"/>',
-    '<path d="M340 44c4 5 7 8 7 12a7 7 0 0 1-14 0c0-3 2-5 3-7c1 3 2 4 4 4c0-3-1-6 0-9z" '
+    '<path d="M230 56V156M450 56V156" stroke="#262C34"/>',
+    '<g class="c1">',
+    text(120, 100, f"{total:,}", size=24, fill="#E6EDF3", weight=700, anchor="middle"),
+    text(120, 122, "Total contributions", size=12, fill="#C9D1D9", anchor="middle"),
+    text(120, 140, f"{mdy(first)} – Present", fill="#6E7681", anchor="middle"),
+    "</g>",
+    '<circle cx="340" cy="94" r="34" fill="none" stroke="#2A3038" stroke-width="4"/>',
+    '<circle id="gl" cx="340" cy="94" r="34" fill="none" stroke="#E9B949" stroke-width="12"/>',
+    '<circle id="rg" cx="340" cy="94" r="34" fill="none" stroke="#E9B949" stroke-width="4" '
+    'stroke-linecap="round" transform="rotate(-90 340 94)"/>',
+    '<path id="fm" d="M340 52c4 5 7 8 7 12a7 7 0 0 1-14 0c0-3 2-5 3-7c1 3 2 4 4 4c0-3-1-6 0-9z" '
     'fill="#E8743B" stroke="#111418" stroke-width="2"/>',
-    text(340, 95, f"{best_len}", size=26, fill="#E9B949", weight=700, anchor="middle"),
-    text(340, 132, "Longest streak · days", size=12, fill="#E9B949", weight=600, anchor="middle"),
-    text(340, 148, streak_span, fill="#6E7681", anchor="middle"),
-    text(560, 92, f"{best_month:,}", size=24, fill="#E6EDF3", weight=700, anchor="middle"),
-    text(560, 114, "Best month", size=12, fill="#C9D1D9", anchor="middle"),
-    text(560, 132, best_month_label, fill="#6E7681", anchor="middle"),
+    '<g class="c2">',
+    text(340, 103, f"{best_len}", size=26, fill="#E9B949", weight=700, anchor="middle"),
+    text(340, 146, "Longest streak · days", size=12, fill="#E9B949", weight=600, anchor="middle"),
+    text(340, 164, streak_span, fill="#6E7681", anchor="middle"),
+    "</g>",
+    '<g class="c3">',
+    text(560, 100, f"{best_month:,}", size=24, fill="#E6EDF3", weight=700, anchor="middle"),
+    text(560, 122, "Best month", size=12, fill="#C9D1D9", anchor="middle"),
+    text(560, 140, best_month_label, fill="#6E7681", anchor="middle"),
+    "</g>",
     "</svg>",
 ])
 
